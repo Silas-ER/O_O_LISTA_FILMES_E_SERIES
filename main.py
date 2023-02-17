@@ -1,8 +1,14 @@
-from banco_de_filmes import filmes
-from banco_de_series import series
+import random
+from banco import Banco, filme, serie
 
-Vingadores = filmes('Vingadores - Guerra Infinita', 2019, 190)
-Vikings = series('Vikings', 2016, 6)
+Vingadores = filme('Vingadores - Guerra Infinita', 2019, 190)
+Vikings = serie('Vikings', 2016, 6)
+Vinland = serie('Vinland Saga', 2013, 2)
+Megan = filme('Megan', 2023, 120)
 
-print("Nome: {} - Ano: {} - Duração: {} - Likes: {}".format(Vingadores.nome, Vingadores.ano, Vingadores.duracao, Vingadores.likes))
-print(Vikings.nome)
+for i in range(1,10):
+    Vingadores.dar_like()
+    Vikings.dar_like()
+    Vinland.dar_like()
+    Megan.dar_like()
+
